@@ -1,0 +1,167 @@
+.super-container {
+    margin-top: 50px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 1349px;
+    margin: 35px auto;
+ }
+ 
+ .component {
+    border-radius: 15px;
+    margin: 30px;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+ }
+ 
+ .job {
+    display: flex;
+ }
+ 
+ 
+ .company-location {
+    display: flex;
+ }
+
+ h3 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+ }
+ .application {
+    float: right;
+    position: relative;
+    top: -31px;
+    right: 2%;
+ }
+ 
+ .apply-button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 39px;
+    border-radius: 23px;
+    position: relative;
+    left: 10%;
+    top: -10px;
+    font-size: 20px;
+ }
+ 
+
+ .toggle-accepted {
+    background-color: #5cdb35;
+ }
+ 
+ .toggle-rejected {
+    background-color: #ff0000;
+ }
+ 
+ .company-location span{
+    color: #4169e1;
+    font-size: 20px;
+    font-weight: lighter;
+ }
+
+ .company-location{
+     font-size: 20px;
+ }
+
+ .header-five{
+     padding-left: 20px;
+     height: 20px;
+     color: #4169e1;
+ }
+
+ .locate{
+    color: #4169e1;
+ }
+ 
+ @media screen and (max-width: 1000px) {
+
+ 
+    h3{
+       font-size: 22px;
+    }
+ 
+    .apply-button{
+       font-size: 17px;
+    }
+ 
+    .apply-button{
+       width:105px;
+    }
+ }
+ 
+ 
+ 
+ @media screen and (max-width: 850px) {
+    .super-container {
+       margin: 30px 0 0 0;
+       padding: 10px;
+    }
+    .component {
+       margin: 0 0 20px 0;
+    }
+    
+    h3 {
+       font-size: 30px;
+    }
+ 
+    .company-location {
+       padding: 18px 0px;
+    }
+    .application {
+       float: none;
+       top: 0;
+       right: 1px;
+    }
+    .apply-button {
+       position: relative;
+       left: 0;
+       top: 0;
+    }
+ 
+    .application {
+       display: flex;
+       margin-left: -22px;
+    }
+    .toggle-accepted {
+       margin: 0px;
+       font-size: 15px;
+       margin-left: 23px;
+    }
+    .toggle-rejected {
+       width: 94px;
+       font-size: 15px;
+       left: 70px;
+       margin-left: -60px;
+    }
+    .apply-button {
+       display: inline-table;
+       font-weight: 700;
+       margin-top: 5px;
+       font-size: 17px;
+    }
+ }
+ 
+ 
+ 
+ @media screen and (max-width: 470px) {
+    h3{
+       font-size: 20px;
+    }
+ 
+    .application{
+       display: block;
+    }
+ 
+    .company-location span{
+        font-size: 15px;
+        font-weight: lighter;
+     }    
+
+    .apply-button{
+       font-size: 14px;
+       padding:  10px 30px;
+    }
+ 
+ }

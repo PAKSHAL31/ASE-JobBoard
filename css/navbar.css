@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #2376ae;
+  font-size: 18px;
+  height: 60px;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.select-page {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.logo {
+  margin-top: 8px;
+  height: 45px;
+}
+
+.main-nav {
+  list-style-type: none;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: none;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+  margin-right: 20px;
+  position: relative;
+  top: -36px;
+}
+.nav-links {
+  padding-left: 25px;
+}
+
+.logo:hover,
+.navbar-toggle:hover,
+.nav-links:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.image-text-box {
+  background-image: url(../web_dev_img/bradcam.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  background-position: 90% center;
+}
+
+.bottom-left {
+  position: relative;
+  top: 330px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+    color: rgba(255, 255, 255, 1);
+  }
+  .main-nav li {
+    text-align: center;
+    margin: 15px auto;
+  }
+
+  .main-nav {
+    list-style-type: none;
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .logo {
+    padding-bottom: 10px;
+    top: 4px;
+    color: rgba(255, 255, 255, 1);
+  }
+  .image-text-box {
+    background-image: url(../web_dev_img/bradcam.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    background-position: 90% center;
+  }
+  .bottom-left {
+    position: relative;
+    top: 130px;
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .image-text-box {
+    background-position: 100% center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bottom-left {
+    font-size: 30px;
+    top: 150px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .bottom-left {
+    font-size: 20px;
+    top: 160px;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .bottom-left {
+    font-size: 15px;
+    top: 170px;
+    padding-left: 10px;
+  }
+}

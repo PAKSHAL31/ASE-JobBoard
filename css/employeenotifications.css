@@ -1,0 +1,146 @@
+.super-container {
+   margin-top: 50px;
+   background: #f0f0f0;
+   padding: 20px;
+   border-radius: 15px;
+   max-width: 1349px;
+   margin: 35px auto;
+}
+/* iske niche ka is of each component inside the supercontainer which will enclose all the components which will be rendered */
+.component {
+   border-radius: 15px;
+   margin: 30px;
+   background: white;
+   padding: 30px;
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.job {
+   display: flex;
+}
+h4 {
+   color: grey;
+   /* margin-left: 82px;
+    font-size: 40px; */
+   display: inline-table;
+   margin-left: 60px;
+   margin-top: 3px;
+   padding: 10px 26px;
+   font-size: 22px;
+   border-radius: 23px;
+   top: -5px;
+}
+.job-type {
+   position: relative;
+}
+
+.company-location {
+   display: flex;
+}
+
+.header-five {
+   margin-left: 92px;
+   font-size: 16px;
+   font-weight: 100;
+}
+h3 {
+   font-size: xx-large;
+}
+
+.application{
+   float: right;
+   position: relative;
+   bottom: 45px;
+   right: 25px;
+}
+
+.application span {
+   text-decoration: none;
+}
+
+.toggle-accepted {
+   color: #5cdb35 ;
+   font-weight: bolder;
+   font-size: 25px;
+}
+
+.toggle-rejected {
+   color: #ff0000; ;
+   font-weight: bolder;
+   font-size: 25px;
+}
+
+.company-location {
+   color: gray;
+}
+.locate {
+   color: #4169e1;
+}
+h5 {
+   color: #4169e1;
+}
+
+@media screen and (max-width: 840px) {
+   .super-container {
+      margin: 30px 0 0 0;
+      padding: 10px;
+   }
+   .component {
+      margin: 0 0 20px 0;
+   }
+   h4 {
+      color: grey;
+      /* margin-left: 82px;
+       font-size: 40px; */
+      display: inline-table;
+      margin-left: 60px;
+      margin-top: 3px;
+      padding: 10px 26px;
+      font-size: 20px;
+      border-radius: 23px;
+      top: -5px;
+   }
+   h3 {
+      font-size: 20px;
+   }
+
+   .header-five {
+      margin-left: 18px;
+      font-size: 16px;
+      font-weight: 100;
+   }
+
+   .company-location {
+      padding: 18px 0px;
+   }
+   .application {
+      float: none;
+      /* position: ; */
+      top: 0;
+      right: 1px;
+   }
+   .apply-button {
+      position: relative;
+      left: 0;
+      top: 0;
+   }
+}
+
+@media screen and (max-width: 400px) {
+
+    h4 {
+       font-size: 15px;
+    }
+     h3 {
+      font-size: 15px;
+   }
+
+   .locate span{
+      font-size: 13px;
+   }
+
+   .header-five span{
+      font-size: 13px;
+   }
+
+}

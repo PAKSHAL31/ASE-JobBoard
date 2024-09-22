@@ -1,0 +1,256 @@
+.container {
+   /* position: relative; */
+   background: white;
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+   max-width: 1349px;
+   width: 95%;
+   padding: 15px;
+   border-radius: 15px;
+   margin: 50px auto;
+}
+
+.quickbar-search-form {
+   display: flex;
+}
+
+input {
+   background: #eee;
+   border: none;
+   padding: 12px 15px;
+   margin: 8px 0;
+   font-size: 12px;
+   width: 500px;
+}
+
+input:focus {
+   outline: none;
+}
+button:focus {
+   outline: none;
+}
+.search-btn {
+   font-size: 30px;
+   margin-left: 3%;
+   margin-top: 10px;
+   cursor: pointer;
+   border: none;
+   background-color: white;
+}
+
+.header-text {
+   padding: 10px 0 10px;
+   margin-left: 50px;
+}
+.suggestor-skill {
+   margin-right: 2%;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+   input{
+      width: 450px;
+   }
+}
+
+@media screen and (max-width: 1080px) {
+   input{
+      width: 400px;
+   }
+}
+
+@media screen and (max-width: 950px) {
+   input{
+      width: 320px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   input {
+      font-size: 10px;
+      width: 250px;
+   }
+   .search-btn {
+      font-size: 25px;
+   }
+}
+
+@media screen and (max-width: 620px) {
+   input {
+      font-size: 10px;
+      width: 200px;
+   }
+
+   .search-btn {
+      font-size: 20px;
+   }
+
+   .header-text {
+      margin-left: 10px;
+      font-size: 15px;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   input {
+      font-size: 8px;
+      width: 140px;
+   }
+
+   .search-btn {
+      margin-top: 15px;
+      font-size: 15px;
+   }
+
+   .header-text {
+      margin-left: 10px;
+      font-size: 12px;
+   }
+}
+
+@media screen and (max-width: 350px) {
+   input {
+      font-size: 8px;
+      width: 130px;
+   }
+}
+
+
+
+/*iske niche ka css is for the dynamic waala part ka   */
+
+.super-container {
+   margin-top: 50px;
+   background: #f0f0f0;
+   padding: 20px;
+   border-radius: 15px;
+   max-width: 1349px;
+   margin: 35px auto;
+}
+/* iske niche ka is of each component inside the supercontainer which will enclose all the components which will be rendered */
+.component {
+   border-radius: 15px;
+   margin: 30px;
+   background: white;
+   padding: 30px;
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.job {
+   display: flex;
+}
+h4 {
+   color: grey;
+   /* margin-left: 82px;
+   font-size: 40px; */
+   display: inline-table;
+   margin-left: 60px;
+   margin-top: 3px;
+   padding: 10px 26px;
+   font-size: 22px;
+   border-radius: 23px;
+   top: -8px;
+}
+.job-type {
+   position: relative;
+}
+
+.company-location {
+   display: flex;
+}
+
+.header-five {
+   margin-left: 92px;
+   font-size: 16px;
+   font-weight: 100;
+}
+h3 {
+   font-size: xx-large;
+}
+.application {
+   float: right;
+   position: relative;
+   top: -31px;
+   right: 81px;
+}
+.company-location span{
+   padding-left: 10px;
+}
+
+
+.apply-button {
+   text-decoration: none;
+   color: white;
+   background: #4169e1;
+   padding: 10px 20px;
+   border-radius: 23px;
+   position: relative;
+   left: 50px;
+   top: -10px;
+}
+
+.company-location {
+   color: gray;
+}
+.locate {
+   color: #4169e1;
+}
+h5 {
+   color: #4169e1;
+}
+
+
+@media screen and (max-width: 950px) {
+ .apply-button {
+   left: 70px;
+}
+}
+
+
+
+@media screen and (max-width: 800px) {
+   .super-container {
+      margin: 30px 0 0 0;
+      padding: 10px;
+   }
+   .component {
+      margin: 0 0 20px 0;
+   }
+   h4 {
+      color: grey;
+      /* margin-left: 82px;
+      font-size: 40px; */
+      display: inline-table;
+      margin-left: 60px;
+      margin-top: 3px;
+      padding: 10px 26px;
+      font-size: 20px;
+      border-radius: 23px;
+      top: -13px;
+   }
+   h3 {
+      font-size: 20px;
+   }
+
+   .header-five {
+      margin-left: 18px;
+      font-size: 16px;
+      font-weight: 100;
+   }
+
+   .company-location {
+      padding: 18px 0px;
+      margin-bottom: 10px;
+   }
+   .application {
+      float: none;
+      /* position: ; */
+      top: 0;
+      right: 1px;
+   }
+   .apply-button {
+      position: relative;
+      left: 0;
+      top: 0;
+   }
+}

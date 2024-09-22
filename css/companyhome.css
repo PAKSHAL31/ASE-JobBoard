@@ -1,0 +1,206 @@
+.super-container {
+   margin-top: 50px;
+   background: #f0f0f0;
+   padding: 20px;
+   border-radius: 15px;
+   max-width: 1349px;
+   margin: 35px auto;
+}
+
+.component {
+   border-radius: 15px;
+   margin: 30px;
+   background: white;
+   padding: 30px;
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.job {
+   display: flex;
+}
+h4 {
+   color: grey;
+   display: inline-table;
+   margin-top: 3px;
+   padding: 10px 26px;
+   font-size: 22px;
+   border-radius: 23px;
+   top: -5px;
+}
+.job-type {
+   position: relative;
+}
+
+.company-location {
+   display: flex;
+}
+h3 {
+   font-size: xx-large;
+}
+.application {
+   float: right;
+   position: relative;
+   top: -31px;
+   right: 2%;
+} 
+
+ .apply-button {
+   text-decoration: none;
+   color: white;
+   padding: 10px 39px;
+   border-radius: 23px;
+   position: relative;
+   left: 5%;
+   top: -10px;
+   font-size: 20px;
+}
+
+.header-five {
+   margin-left: 92px;
+   font-size: 16px;
+   font-weight: 100;
+   color: #4169e1;
+}
+
+.header-five span{
+   margin-left: 2px;
+}
+
+.resume {
+   background: none;
+   color: indigo;
+   font-weight: 700;
+   font-size: x-large;
+}
+.toggle-accepted { 
+   background-color: #5cdb35;
+   margin-right: 10px;
+}
+
+.toggle-rejected {
+   background-color: #ff0000;
+}
+
+.company-location {
+   color: gray;
+}
+.locate {
+   color: #4169e1;
+}
+
+
+@media screen and (max-width: 1000px) {
+   h4{
+      font-size: 18px;
+   }
+
+   h3{
+      font-size: 22px;
+   }
+
+   .apply-button{
+      font-size: 17px;
+   }
+
+   .resume{
+      font-size: 20px;
+      left:10%;
+   }
+
+   .apply-button{
+      width:105px;
+   }
+}
+
+
+
+@media screen and (max-width: 850px) {
+   .super-container {
+      margin: 30px 0 0 0;
+      padding: 10px;
+   }
+   .component {
+      margin: 0 0 20px 0;
+   }
+   h4 {
+      color: grey;
+      /* margin-left: 82px;
+        font-size: 40px; */
+      display: inline-table;
+      margin-left: 60px;
+      margin-top: 3px;
+      padding: 10px 26px;
+      font-size: 20px;
+      border-radius: 23px;
+      top: -5px;
+   }
+   h3 {
+      font-size: 20px;
+   }
+
+   .company-location {
+      padding: 18px 0px;
+   }
+   .application {
+      float: none;
+      top: 0;
+      right: 1px;
+   }
+   .apply-button {
+      position: relative;
+      left: 0;
+      top: 0;
+   }
+
+   .application {
+      display: flex;
+      margin-left: -22px;
+   }
+   .toggle-accepted {
+      margin: 0px;
+      font-size: 15px;
+      margin-left: -20px;
+   }
+   .toggle-rejected {
+      width: 94px;
+      font-size: 15px;
+      left: 70px;
+      margin-left: -60px;
+   }
+   .apply-button {
+      display: inline-table;
+      font-weight: 700;
+      margin-top: 5px;
+      font-size: 17px;
+   }
+   .resume {
+      font-size: 18px;
+      margin-left: -19px;
+   }
+}
+
+
+
+@media screen and (max-width: 420px) {
+   h4{
+      font-size: 15px;
+   }
+
+   h3{
+      font-size: 18px;
+   }
+
+   .application{
+      display: block;
+         }
+
+   .apply-button{
+      font-size: 14px;
+      padding:  10px 30px;
+   }
+
+   .resume{
+      font-size: 16px;
+      margin-left: -20px;
+   }
+}
