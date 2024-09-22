@@ -8,12 +8,12 @@
 
 ## Overview
 
-#### JobGuru
+#### Career Quest
 
-Project Description: Job Guru
+Project Description: Career Quest
 
 Introduction:
-The Job Guru project aims to provide a comprehensive platform for job seekers to find suitable employment opportunities and for employers to connect with potential candidates efficiently. Utilizing HTML, CSS, JavaScript, PHP, and MariaDB, this web application offers features such as user authentication, job posting, application management, and administrative controls.
+The Career project aims to provide a comprehensive platform for job seekers to find suitable employment opportunities and for employers to connect with potential candidates efficiently. Utilizing HTML, CSS, JavaScript, PHP, and MariaDB, this web application offers features such as user authentication, job posting, application management, and administrative controls.
 
 Key Features:
 
