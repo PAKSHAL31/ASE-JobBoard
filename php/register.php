@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="wholebody">
         <div class="navbar1">
             <div class="head1"><img src="../web_dev_img/dailysmarty.png" class="logo"></div>
-            <div class="head"><span>JobGuru</span></div>
+            <div class="head"><span>Career Quest</span></div>
         </div>
         <?php
         if ($showsuccess) {
