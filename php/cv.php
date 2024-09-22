@@ -59,7 +59,7 @@ if (isset($_POST['updlink'])) {
     </div>
 
 
-    <script src="employee.js"></script>
+    
 
     <div id="container">
         <form id="form" method="POST">
@@ -85,7 +85,7 @@ if (isset($_POST['updlink'])) {
             ?>
         </form>
     </div>
-
+    <script src="../js/employee.js"></script>
 </body>
 
 </html>

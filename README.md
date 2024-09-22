@@ -50,6 +50,6 @@ Accept or Reject Applicants: Employers can accept or reject job applications bas
 
 ## Contributors <a id="contributors"></a>
 
--  [Jivin Varghese Porthukaran](https://jivin.co.in/)<br>
-   [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/JivinVarghese/)
-   [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JivinVarghese)
+-  [Pakshal Mahavir Ranawat](https://ranawatpakshal.co.in/)<br>
+   [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pakshal-ranawat/)
+   [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PAKSHAL31)
