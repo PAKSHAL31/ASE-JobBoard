@@ -9,8 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $jobtype = $_POST['jobtype'];
   $jobposition = $_POST['jobposition'];
   $joblocation = $_POST['joblocation'];
+  $jobdescription = $_POST['jobdescription'];
   $companyid = $_SESSION['sess_id'];
-  $sql = "INSERT INTO `postajob` (`job_position`, `job_location`, `job_type`, `company_no`) VALUES ('$jobposition', '$joblocation', '$jobtype', '$companyid');";
+  $sql = "INSERT INTO `postajob` (`job_position`, `job_location`, `job_type`,`job_description`, `company_no`) VALUES ('$jobposition', '$joblocation', '$jobtype','$jobdescription', '$companyid');";
   $result = mysqli_query($conn, $sql);
   if ($result) {
     $success = true;
@@ -70,7 +71,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       <div class="form-box">
         <label>Location</label>
-        <input type="text" class="input" id="location" placeholder="eg. Andheri,Dadar" name="joblocation" required />
+        <input type="text" class="input" id="location" placeholder="eg. Arlington, TX" name="joblocation" required />
+      </div>
+
+      <div class="form-box">
+        <label>Job Description</label>
+        <textarea class="input textarea" id="jobdescription" placeholder="Describe the job..." name="jobdescription" required></textarea>
       </div>
 
       <div class="form-box">
