@@ -42,17 +42,23 @@ h3 {
    position: relative;
    top: -31px;
    right: 2%;
-} 
+}
 
- .apply-button {
+.apply-button {
    text-decoration: none;
    color: white;
    padding: 10px 39px;
    border-radius: 23px;
-   position: relative;
-   left: 5%;
-   top: -10px;
    font-size: 20px;
+}
+
+.view-button {
+   background-color: #4169e1;
+}
+
+.delete-button {
+   background-color: #ff0000;
+   margin-left: 10px;
 }
 
 .header-five {
