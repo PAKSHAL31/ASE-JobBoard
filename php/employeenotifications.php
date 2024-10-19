@@ -30,9 +30,6 @@ $e_id = $_SESSION['sess_id'];
         <a href="employeehome.php" class="nav-links"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
       </li>
       <li>
-        <a href="cv.php" class="nav-links"><i class="fa fa-file" aria-hidden="true"></i> Resume</a>
-      </li>
-      <li>
         <a href="#" class="nav-links select-page"><i class="fa fa-bell" aria-hidden="true"></i> Notifications</a>
       </li>
       <li>

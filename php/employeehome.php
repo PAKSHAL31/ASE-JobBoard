@@ -3,14 +3,12 @@ session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] = false) {
   header("location: ../index.php");
 }
+if (isset($_SESSION['application_success'])) {
+  echo '<script>alert("' . $_SESSION['application_success'] . '");</script>';
+  unset($_SESSION['application_success']); // Unset the session variable after displaying
+}
 include '_dbconnect.php';
 $e_id = $_SESSION['sess_id'];
-if (isset($_GET['job_id'])) {
-  $j_id = $_GET['job_id'];
-  $sqls = "INSERT INTO `employee_job`(`emp_no`, `job_id`, `ar_val`) VALUES ('$e_id','$j_id',0);";
-  $result = mysqli_query($conn, $sqls);
-  unset($_GET['job_id']);
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +19,9 @@ if (isset($_GET['job_id'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/employeehome.css" />
   <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
   <title>HOME</title>
 </head>
 
@@ -36,16 +36,15 @@ if (isset($_GET['job_id'])) {
         <a href="#" class="nav-links select-page"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
       </li>
       <li>
-        <a href="cv.php" class="nav-links"><i class="fa fa-file" aria-hidden="true"></i> Resume</a>
-      </li>
-      <li>
-        <a href="employeenotifications.php" class="nav-links"><i class="fa fa-bell" aria-hidden="true"></i> Notifications</a>
+        <a href="employeenotifications.php" class="nav-links"><i class="fa fa-bell" aria-hidden="true"></i>
+          Notifications</a>
       </li>
       <li>
         <a href="logout.php" class="nav-links"><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a>
       </li>
       <li>
-        <a href="#" class="nav-links"><i class="fa fa-user" aria-hidden="true"></i> <?php echo $_SESSION['navname']; ?></a>
+        <a href="#" class="nav-links"><i class="fa fa-user" aria-hidden="true"></i>
+          <?php echo $_SESSION['navname']; ?></a>
       </li>
     </ul>
   </nav>
@@ -68,6 +67,16 @@ if (isset($_GET['job_id'])) {
           <input type="text" class="input2" placeholder="Eg;Mumbai,Navi Mumbai" name="job_location" />
         </div>
 
+        <div class="suggestor-jobtype">
+          <select name="job_type" class="input3">
+            <option value="">Select Job Type</option>
+            <option value="Full time">Full-time</option>
+            <option value="Part time">Part-time</option>
+            <option value="Internship">Internship</option>
+            <option value="Freelancer">Freelancer</option>
+          </select>
+        </div>
+
         <div style="margin-left: 3%;">
           <button class="fa fa-search search-btn" aria-hidden="true"></button>
         </div>
@@ -81,15 +90,24 @@ if (isset($_GET['job_id'])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $job_position = $_POST['job_position'];
       $job_location = $_POST['job_location'];
-      if ($job_position == '' && $job_location == '') {
-        $sql = "SELECT * FROM postajob WHERE job_id NOT IN (SELECT job_id FROM employee_job WHERE emp_no = '$e_id');";
-      } else if ($job_position == '') {
-        $sql = "SELECT * FROM postajob WHERE job_id NOT IN (SELECT job_id FROM employee_job WHERE emp_no = '$e_id') AND `job_location` LIKE '%$job_location%';";
-      } else if ($job_location == '') {
-        $sql = "SELECT * FROM postajob WHERE job_id NOT IN (SELECT job_id FROM employee_job WHERE emp_no = '$e_id') AND `job_position` LIKE '%$job_position%';";
-      } else {
-        $sql = "SELECT * FROM postajob WHERE job_id NOT IN (SELECT job_id FROM employee_job WHERE emp_no = '$e_id') AND `job_position` LIKE '%$job_position%' AND `job_location` LIKE '%$job_location%'; ";
+      $job_type = $_POST['job_type'];
+
+      // Construct the SQL query based on user inputs
+      $sql = "SELECT * FROM postajob WHERE job_id NOT IN (SELECT job_id FROM employee_job WHERE emp_no = '$e_id')";
+
+      // Add filters if they are set
+      if ($job_position != '') {
+        $sql .= " AND `job_position` LIKE '%$job_position%'";
       }
+
+      if ($job_location != '') {
+        $sql .= " AND `job_location` LIKE '%$job_location%'";
+      }
+
+      if ($job_type != '') {
+        $sql .= " AND `job_type` = '$job_type'";
+      }
+
     } else {
       $sql = "SELECT * FROM postajob WHERE job_id NOT IN (SELECT job_id FROM employee_job WHERE emp_no = '$e_id');";
     }
@@ -115,11 +133,47 @@ if (isset($_GET['job_id'])) {
         </div>
 
         <div class="application">
-          <a href="employeehome.php?job_id=' . $row['job_id'] . '" class="apply-button">Apply Now</a>
+            <button onclick="openModal(\'' . htmlspecialchars($row['job_id']) . '\', \'' . htmlspecialchars($row['job_position']) . '\', \'' . htmlspecialchars($numrows['company_name']) . '\', \'' . htmlspecialchars($row['job_type']). '\', \'' . htmlspecialchars($row['job_location']) . '\', \'' . htmlspecialchars($row['job_description']) . '\');" class="apply-button">Apply Now</button>
         </div>
+
+        
       </div> ';
     }
     ?>
+
+    <div id="jobDetailsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2><span id ="companyHome"></span></h2>
+        <p><strong>Position:</strong> <span id="jobPosition"></span></p>
+        <p><strong>Type:</strong> <span id="jobType"></span></p>
+        <p><strong>Location:</strong> <span id="jobLocation"></span></p>
+        <p><strong>Description:</strong> <span id="jobDescription"></span></p>
+
+        <!-- Form to submit application -->
+        <form action="apply_job.php" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="job_id" id="modalJobId">
+          <input type="hidden" name="emp_no" value="<?php echo $e_id; ?>">
+          <!-- Assuming the employee ID is stored in $e_id -->
+
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+          <div>
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+          </div>
+          <button type="submit">Apply</button>
+        </form>
+      </div>
+    </div>
+
   </div>
   <script src="../js/employee.js"></script>
 </body>

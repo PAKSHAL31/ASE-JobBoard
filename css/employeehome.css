@@ -9,10 +9,59 @@
    margin: 50px auto;
 }
 
+/* Style for the container holding the search form */
 .quickbar-search-form {
    display: flex;
-}
-
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-top: 20px;
+   gap: 15px; /* Add space between the form elements */
+ }
+ 
+ /* Individual input fields */
+ .quickbar-search-form input[type="text"],
+ .quickbar-search-form select {
+   width: 250px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 1rem;
+ }
+ 
+ /* Add some margin to input fields to improve spacing */
+ .quickbar-search-form input {
+   margin-right: 10px;
+ }
+ 
+ /* Style for the search button */
+ .search-btn {
+   padding: 10px 15px;
+   font-size: 1.1rem;
+   color: black;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+ }
+ 
+ /* Add media queries to handle smaller screen sizes */
+ @media (max-width: 768px) {
+   .quickbar-search-form {
+     flex-direction: column;
+     align-items: stretch;
+   }
+ 
+   .quickbar-search-form input[type="text"],
+   .quickbar-search-form select,
+   .search-btn {
+     width: 100%;
+   }
+ 
+   .search-btn {
+     margin-top: 10px;
+   }
+ }
+ 
 input {
    background: #eee;
    border: none;
@@ -253,4 +302,103 @@ h5 {
       left: 0;
       top: 0;
    }
+}
+
+/* Modal Background */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 999; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+   transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Modal Content */
+.modal-content {
+   background-color: white; /* White background */
+   margin: 10% auto; /* Centered with top margin */
+   padding: 30px; /* Padding */
+   border: 1px solid #888; /* Gray border */
+   border-radius: 8px; /* Rounded corners */
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow */
+   width: 80%; /* Responsive width */
+   max-width: 600px; /* Maximum width */
+   opacity: 0; /* Start as invisible */
+   transform: translateY(-50px); /* Start above */
+   transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition */
+}
+
+/* Show the Modal */
+.modal.show .modal-content {
+   opacity: 1; /* Fully visible */
+   transform: translateY(0); /* Slide down to position */
+}
+
+/* Close Button */
+.modal .close {
+   color: #aaa; /* Gray */
+   float: right; /* Right aligned */
+   font-size: 28px; /* Larger font */
+   font-weight: bold; /* Bold font */
+}
+
+.modal .close:hover, .close:focus {
+   color: black; /* Change color on hover */
+   text-decoration: none; /* No underline */
+   cursor: pointer; /* Pointer cursor */
+}
+
+/* Form Layout */
+.modal .modal-content form {
+   display: flex; /* Flexbox for layout */
+   flex-direction: column; /* Vertical layout */
+}
+
+/* Label Styling */
+.modal .modal-content label {
+   margin-top: 20px; /* Space above labels */
+   margin-bottom: 5px; /* Space below labels */
+   font-weight: bold; /* Bold labels */
+}
+
+/* Additional Spacing for <span> and <p> tags */
+.modal .modal-content span,
+.modal .modal-content p {
+   margin-top: 10px; /* Space above <span> and <p> tags */
+   margin-bottom: 5px; /* Space below <span> and <p> tags */
+   line-height: 1.5; /* Increase line height for better readability */
+}
+
+/* Input Field Styling */
+.modal .modal-content input[type="text"],
+.modal .modal-content input[type="date"],
+.modal .modal-content input[type="file"] {
+   padding: 12px; /* Padding for inputs */
+   margin-top: 5px; /* Space above inputs */
+   border: 1px solid #ccc; /* Light gray border */
+   border-radius: 4px; /* Rounded corners */
+   width: 100%; /* Full width */
+   box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Button Styling */
+.modal .modal-content button {
+   margin-top: 20px; /* Space above button */
+   padding: 12px; /* Padding for button */
+   border: none; /* Remove border */
+   border-radius: 4px; /* Rounded corners */
+   background-color: #007BFF; /* Blue background */
+   color: white; /* White text */
+   font-size: 16px; /* Font size */
+   cursor: pointer; /* Pointer cursor */
+   transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.modal .modal-content button:hover {
+   background-color: #0056b3; /* Darker blue on hover */
 }
