@@ -40,6 +40,10 @@ $e_id = $_SESSION['sess_id'];
           Notifications</a>
       </li>
       <li>
+        <a href="rate_company.php" class="nav-links"><i class="fa fa-bell" aria-hidden="true"></i>
+          Reviews</a>
+      </li>
+      <li>
         <a href="logout.php" class="nav-links"><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a>
       </li>
       <li>
