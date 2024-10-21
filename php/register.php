@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $result = mysqli_query($conn, $existsql);
             $numrows = mysqli_num_rows($result);
             if ($numrows > 0) {
-                $showerror = "Email already in use";
+                $showerror = "Email already in use!";
             } else {
                 if (strlen($phnumber) != 10) {
                     $showerror = "Phone Number should be valid";

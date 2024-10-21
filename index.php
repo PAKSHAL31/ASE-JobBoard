@@ -60,10 +60,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['sess_id'] = $row['emp_no'];
                     header("location: php/employeehome.php");
                 } else {
-                    $showerror = "Unable to login";
+                    $showerror = "Unable to login! Password is wrong.";
                 }
             } else {
-                $showerror = "Invalid Credentials";
+                $showerror = "Invalid Credentials! Please Register";
             }
         }
     }
