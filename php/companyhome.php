@@ -41,6 +41,7 @@ $result = mysqli_query($conn, $sql);
         <ul class="main-nav" id="js-menu">
             <li><a href="#" class="nav-links select-page"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
             <li><a href="companypostajob.php" class="nav-links"><i class="fa fa-bell" aria-hidden="true"></i> Post a Job</a></li>
+            <li><a href="company_reviews.php" class="nav-links"><i class="fa fa-comment" aria-hidden="true"></i>Reviews</a></li>
             <li><a href="logout.php" class="nav-links"><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a></li>
             <li><a href="#" class="nav-links"><i class="fa fa-user" aria-hidden="true"></i> <?php echo $_SESSION['navname']; ?></a></li>
         </ul>

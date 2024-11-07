@@ -46,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <li>
         <a href="#" class="nav-links select-page"><i class="fa fa-bell" aria-hidden="true"></i> Post a Job</a>
       </li>
+      <li><a href="company_reviews.php" class="nav-links"><i class="fa fa-comment" aria-hidden="true"></i>Reviews</a></li>
       <li>
         <a href="logout.php" class="nav-links"><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a>
       </li>
