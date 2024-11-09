@@ -75,6 +75,22 @@
 <img src="./screenshots/2.png" width="60%" /> <br>
 <img src="./screenshots/3.png" width="60%" /> <br>
 
+## Testing with Pytest and Selenium
+
+This project includes a suite of automated test cases using `pytest` and `selenium`. Test reports are generated in HTML format for easy viewing.
+
+### Prerequisites
+
+To run these tests, ensure you have Python installed, along with the necessary packages:
+
+1. **Install Pytest**: Used for running test cases.
+2. **Install Selenium**: Required for browser automation tests.
+3. **Install Pytest-HTML**: Used to generate HTML test reports.
+
+Install the required packages using the following command:
+```bash
+pip install pytest selenium pytest-html
+
 <!-- ## Contributors -->
 
 <!-- - [Pakshal Mahavir Ranawat](https://ranawatpakshal.co.in/)
