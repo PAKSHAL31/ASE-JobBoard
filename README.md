@@ -8,48 +8,77 @@
 
 ## Overview
 
-#### Career Quest
+**Career Quest** is a web application designed to provide a comprehensive platform for job seekers and employers. With features such as user authentication, job posting, application management, and administrative controls, it facilitates efficient job searching and recruitment processes.
 
-Project Description: Career Quest
+### Key Features
 
-Introduction:
-The Career project aims to provide a comprehensive platform for job seekers to find suitable employment opportunities and for employers to connect with potential candidates efficiently. Utilizing HTML, CSS, JavaScript, PHP, and MariaDB, this web application offers features such as user authentication, job posting, application management, and administrative controls.
+- **User Authentication**:
+  - Login and Logout for job seekers, employers, and administrators.
+  
+- **Role-based Access**:
+  - Job Seeker: Can search and apply for jobs.
+  - Employer: Can post jobs and review applications.
+  - Admin: Can manage user accounts and oversee job postings.
 
-Key Features:
+- **Job Posting and Management**:
+  - Employers can create, update, and delete job posts.
 
-User Authentication:
-Login: Job seekers, employers, and administrators can log in securely to access their respective accounts.
-Logout: Users can securely log out of their accounts to ensure data privacy.
+- **Application Management**:
+  - Job seekers can apply for jobs.
+  - Employers can review, accept, or reject applications.
 
-Role-based Access:
-Job Seeker Login: Individuals seeking job opportunities can log in to search for jobs, apply for positions, and manage their applications.
+## Installation Guide
 
-Employer Login: Companies and recruiters can log in to post job vacancies, review applications, and manage hiring processes.
+### Prerequisites
+- **XAMPP**: Download and install XAMPP from [Apache Friends](https://www.apachefriends.org/download.html).
 
-Admin Login: Administrators have access to the backend system to manage user accounts, oversee job postings, and ensure platform integrity.
+### Steps to Set Up the Project
 
-Job Posting:
-Employer Dashboard: Employers can create and manage job postings, providing detailed job descriptions, requirements, and application instructions.
+1. **Install XAMPP**:
+   - Follow the installation instructions provided on the XAMPP website to set up Apache and MariaDB (MySQL).
 
-Job Search: Job seekers can browse through available job listings based on criteria such as job title, location, and industry.
+2. **Set Up the Project in `htdocs`**:
+   - Download or clone this project repository to your local machine.
+   - Copy the entire project folder to the `htdocs` directory inside your XAMPP installation folder (e.g., `C:\xampp\htdocs\CareerQuest`).
 
-Application Management:
-Apply for Job: Job seekers can apply for positions by submitting their resumes and relevant documents through the portal.
+3. **Start Apache and MySQL**:
+   - Open the XAMPP Control Panel.
+   - Start the Apache and MySQL services.
 
-Application Review: Employers can review received applications, shortlist candidates, and communicate with applicants regarding the status of their applications.
+4. **Database Setup**:
+   - Open your web browser and go to [http://localhost/phpmyadmin](http://localhost/phpmyadmin).
+   - Create a new database named `career_quest`.
+   - Import the provided SQL file (if available) into this database to set up the required tables. 
+     - To do this, click on your `career_quest` database, go to the "Import" tab, and select the SQL file to upload.
 
-Accept or Reject Applicants: Employers can accept or reject job applications based on their suitability for the position.
+5. **Database Configuration in the Project**:
+   - Open the project folder in a code editor.
+   - Go to the file where database credentials are configured (e.g., `_dbconnect.php`).
+   - Update the database connection details as needed:
+     ```php
+     $servername = "localhost";
+     $username = "root"; // Default username in XAMPP
+     $password = "";     // Default password in XAMPP is empty
+     $dbname = "career_quest"; // Your database name
+     ```
+
+### Running the Project
+
+1. Open a web browser and go to [http://localhost/CareerQuest](http://localhost/CareerQuest) to access the application.
+2. Follow the on-screen prompts to interact with the application:
+   - Sign up or log in as a job seeker, employer, or administrator.
+   - Explore the available functionalities such as job posting, job applications, and profile management.
 
 ## Screenshots
 
 <img src="./screenshots/1.png" width="60%" /> <br>
-
 <img src="./screenshots/2.png" width="60%" /> <br>
-
 <img src="./screenshots/3.png" width="60%" /> <br>
 
-## Contributors <a id="contributors"></a>
+## Contributors
 
--  [Pakshal Mahavir Ranawat](https://ranawatpakshal.co.in/)<br>
-   [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pakshal-ranawat/)
-   [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PAKSHAL31)
+<!-- - [Pakshal Mahavir Ranawat](https://ranawatpakshal.co.in/)
+  - [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pakshal-ranawat/)
+  - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PAKSHAL31)
+
+--- -->
