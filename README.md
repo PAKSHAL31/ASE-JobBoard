@@ -90,6 +90,9 @@ To run these tests, ensure you have Python installed, along with the necessary p
 Install the required packages using the following command:
 ```bash
 pip install pytest selenium pytest-html
+```
+
+
 
 <!-- ## Contributors -->
 
