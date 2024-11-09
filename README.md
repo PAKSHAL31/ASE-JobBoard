@@ -75,7 +75,7 @@
 <img src="./screenshots/2.png" width="60%" /> <br>
 <img src="./screenshots/3.png" width="60%" /> <br>
 
-## Contributors
+<!-- ## Contributors -->
 
 <!-- - [Pakshal Mahavir Ranawat](https://ranawatpakshal.co.in/)
   - [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pakshal-ranawat/)
