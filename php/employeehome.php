@@ -68,7 +68,7 @@ $e_id = $_SESSION['sess_id'];
         </div>
 
         <div class="suggestor-location">
-          <input type="text" class="input2" placeholder="Eg;Mumbai,Navi Mumbai" name="job_location" />
+          <input type="text" class="input2" placeholder="Eg;Arlington,TX" name="job_location" />
         </div>
 
         <div class="suggestor-jobtype">
@@ -82,13 +82,13 @@ $e_id = $_SESSION['sess_id'];
         </div>
 
         <div style="margin-left: 3%;">
-          <button class="fa fa-search search-btn" aria-hidden="true"></button>
+          <button class="search" aria-hidden="true">Search</button>
         </div>
       </div>
     </form>
   </div>
 
-  <div class="super-container">
+  <div class="job-cards-container">
     <?php
     $sql = '';
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -124,24 +124,19 @@ $e_id = $_SESSION['sess_id'];
       $sql = "SELECT `company_name` FROM `company` WHERE `company_no`='" . $row['company_no'] . "' ;";
       $ans = mysqli_query($conn, $sql);
       $numrows = mysqli_fetch_assoc($ans);
-      echo '<div class="component">
-        <div class="job">
-          <h3>' . $row['job_position'] . ' </h3>
-          <h4 class="job-type">' . $row['job_type'] . '</h4>
-        </div>
-
-        <div class="company-location">
-          <a class="locate"><i class="fa fa-server" aria-hidden="true"></i><span>' . $numrows['company_name'] . '</span></a>
-          <h5 class="header-five">
-            <i class="fa fa-map-marker" aria-hidden="true"></i><span>' . $row['job_location'] . '</span></h5>
-        </div>
-
-        <div class="application">
-            <button onclick="openModal(\'' . htmlspecialchars($row['job_id']) . '\', \'' . htmlspecialchars($row['job_position']) . '\', \'' . htmlspecialchars($numrows['company_name']) . '\', \'' . htmlspecialchars($row['job_type']). '\', \'' . htmlspecialchars($row['job_location']) . '\', \'' . htmlspecialchars($row['job_description']) . '\');" class="apply-button">Apply Now</button>
-        </div>
-
-        
-      </div> ';
+      echo '<div class="job-card">
+              <div class="job-card-header">
+                <h3 class="job-title">' . $row['job_position'] . '</h3>
+                <span class="job-type">' . $row['job_type'] . '</span>
+              </div>
+              <div class="job-card-body">
+                <p class="company-name"><i class="fa fa-building"></i> ' . $numrows['company_name'] . '</p>
+                <p class="job-location"><i class="fa fa-map-marker-alt"></i> ' . $row['job_location'] . '</p>
+              </div>
+              <div class="job-card-footer">
+                <button onclick="openModal(\'' . htmlspecialchars($row['job_id']) . '\', \'' . htmlspecialchars($row['job_position']) . '\', \'' . htmlspecialchars($numrows['company_name']) . '\', \'' . htmlspecialchars($row['job_type']). '\', \'' . htmlspecialchars($row['job_location']) . '\', \'' . htmlspecialchars($row['job_description']) . '\');" class="apply-button">Apply Now</button>
+              </div>
+            </div>';
     }
     ?>
 

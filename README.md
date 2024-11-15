@@ -92,6 +92,10 @@ Install the required packages using the following command:
 pip install pytest selenium pytest-html
 ```
 
+Run the test using the follwing command:
+```bash
+python main.py
+```
 
 
 <!-- ## Contributors -->

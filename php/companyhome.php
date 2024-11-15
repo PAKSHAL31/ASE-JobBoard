@@ -52,30 +52,26 @@ $result = mysqli_query($conn, $sql);
     </div>
 
     <div class="super-container">
-        <?php
-        if (mysqli_num_rows($result) == 0) {
-            echo '<h4 style="color:black;">No Job Posts</h4>';
-        } else {
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo '<div class="component">
-                    <div class="job">
-                        <h3>' . $row['job_position'] . '</h3>
-                        <h4 class="job-type">' . $row['job_type'] . '</h4>
-                    </div>
-
-                    <div class="company-location">
-                        <a class="locate"><i class="fa fa-map-marker" aria-hidden="true"></i><span> ' . $row['job_location'] . '</span></a>
-                    </div>
-                    
-                    <div class="application">
-                        <a href="view_applicants.php?job_id=' . $row['job_id']  . '" class="apply-button view-button">View</a>
-                        <a href="companyhome.php?delete_job_id=' . $row['job_id'] . '" class="apply-button delete-button" onclick="return confirm(\'Are you sure you want to delete this job?\');">Delete</a>
-                    </div>
-                </div>';
-            }
+    <?php
+    if (mysqli_num_rows($result) == 0) {
+        echo '<h4 style="color:black;">No Job Posts</h4>';
+    } else {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<div class="job-card">
+                <div class="job-info">
+                    <h3>' . $row['job_position'] . '</h3>
+                    <h4 class="job-type">' . $row['job_type'] . '</h4>
+                    <p class="job-location"><i class="fa fa-map-marker" aria-hidden="true"></i> ' . $row['job_location'] . '</p>
+                </div>
+                <div class="job-actions">
+                    <a href="view_applicants.php?job_id=' . $row['job_id'] . '" class="apply-button view-button">View</a>
+                    <a href="companyhome.php?delete_job_id=' . $row['job_id'] . '" class="apply-button delete-button" onclick="return confirm(\'Are you sure you want to delete this job?\');">Delete</a>
+                </div>
+            </div>';
         }
-        ?>
-    </div>
+    }
+    ?>
+</div>
 
     <script src="../js/employee.js"></script>
 </body>

@@ -94,6 +94,108 @@ button:focus {
    margin-right: 2%;
 }
 
+button {
+   padding: 10px 20px;
+   font-size: 16px;
+   color: white;
+   background-color: #007BFF; /* Adjust color as needed */
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+ 
+ button:hover {
+   background-color: #0056b3; /* Darker shade for hover */
+ }
+ 
+ button:focus {
+   outline: 2px solid #0056b3;
+   outline-offset: 2px;
+ }
+ 
+ .job-cards-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   padding: 20px;
+   justify-content: center;
+ }
+ 
+ .job-card {
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   width: 450px;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   transition: transform 0.3s ease;
+ }
+ 
+ .job-card:hover {
+   transform: translateY(-5px);
+ }
+ 
+ .job-card-header {
+   padding: 15px;
+   background-color: #007BFF;
+   color: #fff;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .job-title {
+   font-size: 1.2em;
+   margin: 0;
+ }
+ 
+ .job-type {
+   background-color: #0056b3;
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-size: 0.9em;
+ }
+ 
+ .job-card-body {
+   padding: 15px;
+   color: #333;
+ }
+ 
+ .company-name,
+ .job-location,
+ .job-description {
+   margin: 8px 0;
+   font-size: 0.9em;
+   color: #555;
+ }
+ 
+ .job-card-footer {
+   padding: 15px;
+   display: flex;
+   justify-content: center;
+ }
+ 
+ .apply-button {
+   padding: 10px 20px;
+   background-color: #007BFF;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .apply-button:hover {
+   background-color: #0056b3;
+ }
+ 
+ .apply-button:focus {
+   outline: 2px solid #0056b3;
+   outline-offset: 2px;
+ }
+ 
 
 
 @media screen and (max-width: 1280px) {

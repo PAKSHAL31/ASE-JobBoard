@@ -94,6 +94,97 @@ h3 {
    color: #4169e1;
 }
 
+.super-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   padding: 20px;
+   justify-content: center;
+}
+
+.job-card {
+   width: calc(50% - 20px); /* Two cards per row */
+   background-color: #f9f9f9;
+   border: 1px solid #e0e0e0;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: transform 0.3s ease;
+   text-align: left;
+}
+
+.job-card:hover {
+   transform: translateY(-5px);
+}
+
+.job-info {
+   flex-grow: 1;
+   margin-right: 20px; /* Add spacing between text and buttons */
+}
+
+.job-info h3 {
+   font-size: 1.2rem;
+   color: #333;
+   margin: 0; /* Remove margin for better alignment */
+}
+
+.job-info .job-type {
+   font-size: 1rem;
+   color: #666;
+   margin-left: -25px;
+}
+
+.job-location {
+   color: #777;
+   font-size: 0.9rem;
+   display: flex;
+   align-items: center;
+}
+
+.job-location i {
+   margin-right: 5px; /* Space between icon and text */
+}
+
+.job-actions {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   align-items: flex-end; /* Align buttons to the right side */
+}
+
+.apply-button {
+   padding: 8px 16px;
+   border-radius: 4px;
+   text-decoration: none;
+   color: #fff;
+   font-size: 0.9rem;
+   transition: background-color 0.3s ease;
+   text-align: center;
+   min-width: 80px; /* Ensure buttons are the same width */
+}
+
+.view-button {
+   background-color: #4CAF50; /* Green */
+}
+
+.delete-button {
+   background-color: #F44336; /* Red */
+}
+
+.apply-button:hover {
+   opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   .job-card {
+       width: 100%; /* One card per row on smaller screens */
+   }
+}
+
 
 @media screen and (max-width: 1000px) {
    h4{

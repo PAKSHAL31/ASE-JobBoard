@@ -37,3 +37,14 @@ function closeModal() {
    }, 400); // Duration matches CSS transition
 }
 
+
+function toggleComments(jobPosition) {
+   var commentsText = document.getElementById('comments-text-' + jobPosition);
+   
+   // Toggle between showing and hiding the comments text
+   if (commentsText.style.display === "none" || commentsText.style.display === "") {
+     commentsText.style.display = "block";
+   } else {
+     commentsText.style.display = "none";
+   }
+ }
