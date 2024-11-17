@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form class="loginform" action="index.php" method="POST">
                     <div class="login-input">
                         <span class="radio-label">Select one:</span>
-                        <input type="radio" class="radio-btn" name="category" value="Employee"><span class="radio-label">Employee</span>
+                        <input type="radio" class="radio-btn" name="category" value="Employee"><span class="radio-label">Job Seeker</span>
                         <input type="radio" class="radio-btn" name="category" value="Company"><span class="radio-label">Company</span>
                     </div>
                     <div class="login-input">
